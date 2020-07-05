@@ -1,0 +1,14 @@
+﻿---
+ID: "f39720ac-162f-41ac-95fb-a82463124c50"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "4f539f2e-9cf9-4453-8e82-3d13ded12ab3"
+Path: /sitecore/content/Example
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200704T195845Z
