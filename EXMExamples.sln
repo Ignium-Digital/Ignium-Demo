@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{1F107AB6-7186-43A0-B67A-11B218EEE9C6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		docker-compose.xp.9.2.x.yml = docker-compose.xp.9.2.x.yml
+		publishsettingswebsitedebug.targets = publishsettingswebsitedebug.targets
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{8741155A-C6F8-4AF6-921E-CFCD0E1D84BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{AF0B9C65-CAF2-4A8B-832B-B0BDF787611D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{D31A898F-2224-4030-9D8F-E084675DBA4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{E5BE7FA5-C3C6-4C6C-BBB6-3CA37112FB58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Foundation.Email", "src\Foundation\Email\code\ExmExample.Foundation.Email.csproj", "{C65C3794-F89C-4372-9F0A-8E52B23E8E10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{EFF0A678-341A-42DB-B95C-DEBB22DCC743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Project.Example", "src\Project\Example\code\ExmExample.Project.Example.csproj", "{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EXM", "EXM", "{065D521F-1068-4BD3-BD30-86F2785206EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Feature.EXM", "src\Feature\EXM\code\ExmExample.Feature.EXM.csproj", "{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{B5DF90C2-5639-42AE-A250-639EF14ACDFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Foundation.Serialization", "src\Foundation\Serialization\code\ExmExample.Foundation.Serialization.csproj", "{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C65C3794-F89C-4372-9F0A-8E52B23E8E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65C3794-F89C-4372-9F0A-8E52B23E8E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65C3794-F89C-4372-9F0A-8E52B23E8E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65C3794-F89C-4372-9F0A-8E52B23E8E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5BE7FA5-C3C6-4C6C-BBB6-3CA37112FB58} = {AF0B9C65-CAF2-4A8B-832B-B0BDF787611D}
+		{C65C3794-F89C-4372-9F0A-8E52B23E8E10} = {E5BE7FA5-C3C6-4C6C-BBB6-3CA37112FB58}
+		{EFF0A678-341A-42DB-B95C-DEBB22DCC743} = {8741155A-C6F8-4AF6-921E-CFCD0E1D84BD}
+		{4D95AE2E-BCDB-4CF9-86EB-4FF0F394DC6B} = {EFF0A678-341A-42DB-B95C-DEBB22DCC743}
+		{065D521F-1068-4BD3-BD30-86F2785206EE} = {D31A898F-2224-4030-9D8F-E084675DBA4A}
+		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78} = {065D521F-1068-4BD3-BD30-86F2785206EE}
+		{B5DF90C2-5639-42AE-A250-639EF14ACDFD} = {AF0B9C65-CAF2-4A8B-832B-B0BDF787611D}
+		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB} = {B5DF90C2-5639-42AE-A250-639EF14ACDFD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8660E8D3-8392-41B5-A565-319123AFD810}
+	EndGlobalSection
+EndGlobal
