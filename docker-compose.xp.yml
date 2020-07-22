@@ -20,6 +20,7 @@ services:
 
   xconnect:
     image: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\xconnect\\Development.ps1"
     volumes:
       - ${LICENSE_PATH}:C:\license
       - .\data\xconnect:C:\inetpub\wwwroot\App_Data\logs
@@ -27,6 +28,11 @@ services:
     links:
       - sql
       - solr
+    depends_on:
+      sql:
+        condition: service_healthy
+      solr:
+        condition: service_started
 
   xconnect-automationengine:
     image: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -38,6 +44,11 @@ services:
     links:
       - sql
       - xconnect
+    depends_on:
+      sql:
+        condition: service_healthy
+      xconnect:
+        condition: service_started
 
   xconnect-indexworker:
     image: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -49,6 +60,11 @@ services:
     links:
       - sql
       - solr
+    depends_on:
+      sql:
+        condition: service_healthy
+      solr:
+        condition: service_started
 
   xconnect-processingengine:
     image: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -61,6 +77,11 @@ services:
     links:
       - sql
       - xconnect
+    depends_on:
+      sql:
+        condition: service_healthy
+      xconnect:
+        condition: service_started
 
   cd:
     image: ${REGISTRY}sitecore-xp-sxa-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -75,6 +96,13 @@ services:
       - sql
       - solr
       - xconnect
+    depends_on:
+      sql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+      xconnect:
+        condition: service_started
 
   cm:
     image: ${REGISTRY}sitecore-xp-sxa-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -90,3 +118,10 @@ services:
       - sql
       - solr
       - xconnect
+    depends_on:
+      sql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+      xconnect:
+        condition: service_started

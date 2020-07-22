@@ -1,0 +1,14 @@
+﻿---
+ID: "5dde1cb9-6340-4fdf-b128-4d36b5d3b30c"
+Parent: "6b0f8fb4-701d-4a1b-bcd5-9b11e653793f"
+Template: "6b0f8fb4-701d-4a1b-bcd5-9b11e653793f"
+Path: /sitecore/templates/Project/Example/Datasource/Html Content/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200705T200511Z

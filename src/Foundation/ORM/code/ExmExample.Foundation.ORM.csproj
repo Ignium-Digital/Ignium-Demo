@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78}</ProjectGuid>
+    <ProjectGuid>{CBC6694A-FD8D-4711-A484-C4048901B991}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExmExample.Feature.EXM</RootNamespace>
-    <AssemblyName>ExmExample.Feature.EXM</AssemblyName>
+    <RootNamespace>ExmExample.Foundation.ORM</RootNamespace>
+    <AssemblyName>ExmExample.Foundation.ORM</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -121,15 +121,11 @@
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
-    <Content Include="Views\EXM\HtmlContent.cshtml" />
-    <Content Include="Views\EXM\Banner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
-    <Compile Include="Controllers\ExmController.cs" />
-    <Compile Include="Models\IBanner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -142,12 +138,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\ORM\code\ExmExample.Foundation.ORM.csproj">
-      <Project>{cbc6694a-fd8d-4711-a484-c4048901b991}</Project>
-      <Name>ExmExample.Foundation.ORM</Name>
-    </ProjectReference>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -162,9 +155,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64274</DevelopmentServerPort>
+          <DevelopmentServerPort>55473</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64274/</IISUrl>
+          <IISUrl>http://localhost:55473/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

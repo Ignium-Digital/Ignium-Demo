@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serializat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Foundation.Serialization", "src\Foundation\Serialization\code\ExmExample.Foundation.Serialization.csproj", "{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{FDB0F4AB-A9F1-4038-8E4D-F5C13C602389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExmExample.Foundation.ORM", "src\Foundation\ORM\code\ExmExample.Foundation.ORM.csproj", "{CBC6694A-FD8D-4711-A484-C4048901B991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC6694A-FD8D-4711-A484-C4048901B991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC6694A-FD8D-4711-A484-C4048901B991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC6694A-FD8D-4711-A484-C4048901B991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC6694A-FD8D-4711-A484-C4048901B991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,8 @@ Global
 		{3A887BF2-1BD2-4C0B-AAA6-73FE8AE14C78} = {065D521F-1068-4BD3-BD30-86F2785206EE}
 		{B5DF90C2-5639-42AE-A250-639EF14ACDFD} = {AF0B9C65-CAF2-4A8B-832B-B0BDF787611D}
 		{A1D6A1FF-F6CD-4FB2-8BE6-289F1B60F7DB} = {B5DF90C2-5639-42AE-A250-639EF14ACDFD}
+		{FDB0F4AB-A9F1-4038-8E4D-F5C13C602389} = {AF0B9C65-CAF2-4A8B-832B-B0BDF787611D}
+		{CBC6694A-FD8D-4711-A484-C4048901B991} = {FDB0F4AB-A9F1-4038-8E4D-F5C13C602389}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8660E8D3-8392-41B5-A565-319123AFD810}

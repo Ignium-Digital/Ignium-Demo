@@ -1,0 +1,61 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using ExmExample.Feature.EXM.Models
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model IBanner
+
+
+<!-- header -->
+<tr>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @Html.Glass().Editable(x => x.Background)
+    }
+    <td class="bgp-m" style="background:#766d37 url(https://www.aps.com/-/media/APS/APS-Email-Images/Purple_Sky_Storm_Header_Photo) no-repeat center top; background-size:cover">
+        <!--[if gte mso 9]>
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display:inline-block; width:640px; height:456px;" src="https://www.aps.com/-/media/APS/APS-Email-Images/Purple_Sky_Storm_Header_Photo" />
+            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display:inline-block; position:absolute; width:640px; height:456px;">
+                <v:fill opacity="0%" color="#766d37" />
+                <v:textbox style="padding-top:0; padding-right:0; padding-bottom:0; padding-left:0;">
+                    <![endif]-->
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="hm" width="62" height="456"></td>
+                <td class="plr-24" valign="top">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="pb-32" style="padding:48px 0 40px;">
+                                <a style="text-decoration:none;" href="https://www.aps.com/en/residential/home?src=email">
+                                    <img src="https://www.aps.com/-/media/APS/APS-Email-Images/Header-Logo" alt="" width="99" height="33" style="font:24px/33px Arial, Helvetica, sans-serif; color:#fff; vertical-align:top;" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pb-31 fs-30 lh-40" style="padding:0 0 47px; font:700 28px/64px Verdana, Helvetica, sans-serif, Montserrat500; color:#fff;">
+                                Arizona storm <br /> season is here —<br /> be prepared
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pb-32">
+                                <a href="https://www.aps.com/en/Utility/Outage/Outage-Center">
+                                    <table width="200" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td height="27" align="center" class="active-t" style="background:#fff; mso-padding-alt:8pt 10px; padding:8pt 10px; font:700 16px/18px Verdana, Helvetica, sans-serif, Montserrat500; border: 1px solid #fff; -webkit-border-radius: 23px; -moz-border-radius: 23px; border-radius: 23px;"><a href="https://www.aps.com/en/Utility/Outage/Outage-Center" style="color: #218AD7; text-decoration: none;">Learn more</a></td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="hm" width="40"></td>
+            </tr>
+        </table>
+        <!--[if gte mso 9]>
+                    </v:textbox>
+                </v:rect>
+            </v:image>
+        <![endif]-->
+    </td>
+</tr>

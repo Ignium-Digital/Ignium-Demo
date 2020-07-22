@@ -1,0 +1,14 @@
+﻿---
+ID: "5659a35c-d3eb-472d-8f30-f51ec6573ff4"
+Parent: "b5350e9c-10d8-4b0c-b38b-2d4cbb1b7f3e"
+Template: "b5350e9c-10d8-4b0c-b38b-2d4cbb1b7f3e"
+Path: /sitecore/templates/Project/Example/Datasource/Banner/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200713T214905Z
