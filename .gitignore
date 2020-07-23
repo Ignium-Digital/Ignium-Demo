@@ -5,9 +5,8 @@
 **/obj/Debug
 **/obj/Release
 **/xconnect/bin
-/data
-/data/**/*
-!/data/**/*.gitkeep
+/data/*/*
+!/data/*/.gitkeep
 *.user
 /deploy/website/*
 !/deploy/website/*.gitkeep
