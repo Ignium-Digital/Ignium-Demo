@@ -1,0 +1,18 @@
+﻿---
+ID: "d6e3411c-9ee9-4a26-886c-f41fb8204434"
+Parent: "11d1adec-27e3-4838-a3af-f18750f4cd65"
+Template: "11d1adec-27e3-4838-a3af-f18750f4cd65"
+Path: /sitecore/templates/Feature/EXM/_Banner/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200713T214433Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

@@ -120,6 +120,7 @@
     <Content Include="App_Config\Include\Glass\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
+    <Content Include="App_Config\Include\Feature\Feature.EXM.Serialization.config" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <Content Include="Views\EXM\HtmlContent.cshtml" />
     <Content Include="Views\EXM\Banner.cshtml" />
