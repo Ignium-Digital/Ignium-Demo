@@ -1,0 +1,35 @@
+﻿---
+ID: "39f2de3a-323e-4f30-a4ea-f0e9ead53de9"
+Parent: "c15bd8bc-8a2e-446a-b469-875b671f077b"
+Template: "3f12d78c-b7b7-4157-98fc-da3322ee1a5b"
+Path: /sitecore/templates/Branches/Project/Example/Example Marketing Announcement/$name/Message Root
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{D0CEEFC1-7A83-41C8-8996-696DE18A0103}">
+        <r
+          ds="{72EBC0D1-46FB-4C01-B7A3-75F5A81B7DDD}"
+          id="{4F5C094D-74AE-4EB4-859A-815A15918F2C}"
+          par=""
+          ph="Main-Content"
+          uid="{CD6DA1A6-44B4-4AF3-8BCF-5C83633CFFED}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200705T194533Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

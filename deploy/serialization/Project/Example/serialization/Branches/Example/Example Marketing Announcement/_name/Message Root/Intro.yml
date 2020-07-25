@@ -1,0 +1,26 @@
+﻿---
+ID: "72ebc0d1-46fb-4c01-b7a3-75f5a81b7ddd"
+Parent: "39f2de3a-323e-4f30-a4ea-f0e9ead53de9"
+Template: "6b0f8fb4-701d-4a1b-bcd5-9b11e653793f"
+Path: /sitecore/templates/Branches/Project/Example/Example Marketing Announcement/$name/Message Root/Intro
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200705T200605Z
+    - ID: "7e55c921-7a96-42cb-b123-d92258a754bc"
+      Hint: Html
+      Value: |
+                    <p>We work 24/7 to ensure reliable power. Yet, Arizona storms often bring unexpected power outages. When an outage does occur, you can stay in the know as we work quickly to restore power. </p>
+                    <p>&nbsp;</p>
+                    <p><b>Get outage alerts</b><br />Receive text/email updates on power outages and estimated restoration times.</p>
+                    <p>&nbsp;</p>
+                    <p><b>View outage map</b><br />Use our interactive outage map to find details on current power outages in your area.</p>
+                    <p>&nbsp;</p>
+                    <p><b>Report an outage online</b><br />Alert us to a power outage at your home or in the area.</p>
+                    <p>&nbsp;</p>
+                    <p>IMPORTANT: Storms can knock down power lines. If you see a downed power line or wires, assume they are energized and stay at least 100 feet away. Call 911 first, then APS at (602) 371-7171.</p>
