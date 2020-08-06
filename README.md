@@ -2,7 +2,7 @@
 
 This solution demonstrates how to configure EXM for Custom SMTP.  It also shows how to create custom modules for EXM and creating customized templates for sending personalized e-mails for your organization.
 
-## Setup
+## Initial Setup
 
 This solution uses the Sitecore Docker images to run.  Follow the steps below to get setup and working with this demo.
 
@@ -14,10 +14,13 @@ docker login igniumdigital.azurecr.io --username "9505e2b1-0755-4a53-9f18-4d6901
 ```
 (Do not share this repository or service principal)
 
-1) Review contents of `.env` locally and ensure paths etc are correct.  Currently this solution has been tested for:
+3) Review contents of `.env` locally and ensure paths etc are correct.  Currently this solution has been tested for:
 
     * 9.2.0 SXA
-2) Spin up the Docker images: (Run in the root of the solution)
+    * 9.2.0 SXA JSS
+    * 9.3.0 XC (Make sure you update `.env` with 9.3.0 before trying to run this configuration)
+  
+4) Spin up the Docker images: (Run in the root of the solution)
 
 ``` (UP)
 c:\Development\Exm-Example> docker-compose --file "docker-compose.xp.yml" up -d
@@ -39,6 +42,11 @@ c:\Development\Exm-Example> docker-compose --file "docker-compose.xp.yml" down
 
 Refer to my Docker cheatsheet if you have any troubles with docker commands.
 
+## Using Different Configuration
+
+If you are hoping to run a different docker compose after already running one, or you want a fresh install, please follow the following steps:
+
+1) .\CleanData.ps1
 
 ## Future Enhancements
 
