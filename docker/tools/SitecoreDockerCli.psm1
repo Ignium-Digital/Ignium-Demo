@@ -127,7 +127,7 @@ function Initialize-HostNames {
     Add-HostsEntry "www.$($HostDomain)"
     
     if (!(Test-Path ".\docker\traefik\certs\cert.pem")) {
-        & ".\_StarterKit\tools\\mkcert.ps1" -FullHostName $hostDomain
+        & ".\\docker\\tools\\mkcert.ps1" -FullHostName $hostDomain
     }
 }
 

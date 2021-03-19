@@ -82,7 +82,7 @@ services:
     restart: always
     labels:
       - "traefik.http.middlewares.redirect-to-https.redirectScheme.scheme=https"
-      - "traefik.http.routers.cm.middlewares=redirect-to-https"
+      - "traefik.http.routers.cm-secure.middlewares=redirect-to-https"
 
   xconnect:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-xconnect:${VERSION:-latest}
