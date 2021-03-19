@@ -5,10 +5,12 @@
 **/obj/Debug
 **/obj/Release
 **/xconnect/bin
-/data/*/*
-!/data/*/.gitkeep
+docker/data/*/*
+!docker/data/*/.gitkeep
 *.user
-/deploy/website/*
-!/deploy/website/*.gitkeep
+docker/deploy/**/*
+!docker/deploy/**/*.gitkeep
 **/tests/bin/Debug
 **/tests/obj/Debug
+
+*.env.local

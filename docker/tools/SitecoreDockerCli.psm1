@@ -2,49 +2,6 @@ using namespace System.Management.Automation.Host
 
 Set-StrictMode -Version Latest
 
-function Install-DockerStarterKit {
-    param(
-        [Parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [string] 
-        $Name,
-        [ValidateNotNullOrEmpty()]
-        [string] 
-        $StarterKitRoot = ".\_StarterKit",
-        [ValidateNotNullOrEmpty()]
-        [string] 
-        $DestinationFolder = ".\docker\",
-        [bool]$IncludeSolutionFiles
-    )
-
-    $foldersRoot = Join-Path $StarterKitRoot "\docker"
-    $solutionFiles = Join-Path $StarterKitRoot "\solution\*"
-
-    if (Test-Path $DestinationFolder) {
-        Remove-Item $DestinationFolder -Force
-    }
-    New-Item $DestinationFolder -ItemType directory
-    
-    if ((Test-Path $solutionFiles) -and $IncludeSolutionFiles) {
-        Write-Host "Copying solution and msbuild files for local docker setup.." -ForegroundColor Green
-        Copy-Item $solutionFiles ".\" -Recurse -Force
-    }
-    
-    Write-Host "Merging $($name) docker folder.." -ForegroundColor Green
-    $folder = ""
-    $Name.Split("-") | ForEach-Object{ 
-        $folder = "$($folder)$($_)"; 
-        if (Test-Path (Join-Path $foldersRoot $folder))
-        {
-            $path = "$((Join-Path $foldersRoot $folder))\*"
-            Write-Host "Copying $($path) to $DestinationFolder" -ForegroundColor Magenta
-            Copy-Item $path $DestinationFolder -Recurse -Force
-        }
-        $folder = "$($folder)-"
-    }
-    Move-Item (Join-Path $DestinationFolder "Dockerfile") ".\" -Force
-}
-
 function Get-EnvValueByKey {
     param(
         [Parameter(Mandatory = $true)]
@@ -53,7 +10,7 @@ function Get-EnvValueByKey {
         $Key,        
         [ValidateNotNullOrEmpty()]
         [string] 
-        $FilePath = ".env",
+        $FilePath = ".env.local",
         [ValidateNotNullOrEmpty()]
         [string] 
         $DockerRoot = ".\docker"
@@ -102,13 +59,15 @@ function Start-Docker {
     if ($Build) {
         docker-compose build
     }
-    docker-compose up -d
+    docker-compose --env-file ".env.local" up -d
 
-    Write-Host "`n`n..now the last thing left to do is a little dance for about 15 seconds to make sure Traefik is ready..`n`n`n" -ForegroundColor DarkYellow
     Write-Host "`nif something failed along the way, press [ctrl-c] to stop the dance and try again." -ForegroundColor Gray
     Write-Host "`ndon't forget to ""Populate Solr Managed Schema"" from the Control Panel`n`n`n" -ForegroundColor Yellow  
-    Write-Host "`n`n`ndance done.. opening https://$($url)`n`n" -ForegroundColor DarkGray
-    Write-Host "`nIf the request fails with a 404 on the first attempt then the dance wasn't long enough - just hit refresh..`n`n" -ForegroundColor DarkGray
+
+    Start-Sleep -Seconds 60
+
+    Write-Host "`n`n`nopening https://$($url)`n`n" -ForegroundColor DarkGray
+    Write-Host "`nIf the request fails with a 404 on the first attempt - just wait a few minutes and hit refresh..`n`n" -ForegroundColor DarkGray
     Start-Process "https://$url"
 }
 
