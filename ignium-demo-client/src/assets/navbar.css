@@ -1,0 +1,319 @@
+.navbar {
+  align-items: center;
+  background-color: #FFF;
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: flex;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  transition: box-shadow 0.2s;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 2px solid #efefef;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+}
+
+.navbar--body {
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+
+.navbar__brand {
+  cursor: pointer;
+}
+
+.navbar__links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links li {
+  list-style: none;
+}
+
+.navbar__links li a {
+  color: #0E1137;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: -0.42px;
+  line-height: 28px;
+  opacity: 0.74;
+  margin-left: 4rem;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navbar__links a:hover {
+  opacity: 1;
+}
+
+.navbar__links a:hover::after {
+  animation-duration: 0.2s;
+  animation-name: navlink_line;
+  background-color: #0E1137;
+  height: 0.5rem;
+  content: "";
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -2.1rem;
+  width: 100%;
+}
+
+.navbar__links .orange--text a {
+  cursor: pointer;
+  color: #F94322;
+}
+
+.navbar__links .orange--text :hover::after {
+  background-color: #F94322;
+}
+
+.navbar__menu__toggle {
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  position: absolute;
+  right: 1rem;
+}
+
+.navbar__links__dropdown ul {
+  display: grid;
+}
+
+.navbar__menu__toggle {
+  position: absolute;
+  top: 2rem;
+  right: 15vw;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+}
+
+.navbar__menu__toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.1s;
+}
+
+.navbar__menu__toggle {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bar--1 {
+  transform-origin: center left;
+}
+
+.bar--3 {
+  transform-origin: center left;
+}
+
+.navbar__links li .active {
+  opacity: 1;
+}
+
+.active::after {
+  animation-duration: 0.2s;
+  animation-name: navlink_line;
+  background-color: #0E1137;
+  height: 0.5rem;
+  content: "";
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  position: absolute;
+  top: -2.1rem;
+  width: 100%;
+}
+
+.orange--text .active::after {
+  background-color: #F94322;
+}
+
+@keyframes navlink_line {
+  from {
+      width: 0;
+  }
+
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes grow {
+  from {
+      height: 5rem;
+  }
+
+  to {
+      height: 27.5rem;
+  }
+}
+
+@keyframes fadeout {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes rotate45 {
+  from {
+      transform: rotate(0deg)
+  }
+
+  from {
+      transform: rotate(45deg)
+  }
+}
+
+@keyframes rotate_neg45 {
+  from {
+      transform: rotate(0deg)
+  }
+
+  from {
+      transform: rotate(-45deg)
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+      padding: 0 1rem;
+  }
+}
+
+
+/*
+*  This is the size that the navbar links begin to compress
+*/
+
+@media only screen and (max-width: 900px) {
+
+  .navbar {
+      align-items: flex-start;
+      box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
+      flex-direction: column;
+      height: 5rem;
+      padding: 1.5rem 5vw 0 5vw;
+      overflow: hidden;
+      position: static;
+      transition: all 0.2s;
+      -webkit-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
+      -moz-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
+  }
+
+  .navbar--body {
+      display: block;
+      width: 100%;
+      margin: 0;
+  }
+
+  .grow {
+      height: 27.75rem;
+  }
+
+  .navbar__menu__toggle {
+      display: flex;
+      right: 5vw;
+  }
+
+  .inactive {
+      display: none;
+  }
+
+  .navbar__links .active {
+      display: flex;
+  }
+
+  .opened>.bar--1 {
+      animation-name: rotate45;
+      animation-duration: 0.1s;
+      transform: rotate(45deg);
+      /* margin-top: -1.5px; */
+      width: 85%;
+  }
+
+  .opened>.bar--3 {
+      animation-name: rotate_neg45;
+      animation-duration: 0.1s;
+      transform: rotate(-45deg);
+      /* margin-bottom: -1.5px; */
+      width: 85%;
+  }
+
+  .opened>.bar--2 {
+      animation-name: fadeout;
+      animation-duration: 0.1s;
+      opacity: 0;
+  }
+
+  .navbar__links ul {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .navbar__links ul li a {
+      display: inline-block;
+      font-size: 1rem;
+      margin: 1.5rem 0;
+      padding: 0;
+  }
+
+  .navbar__links a:hover::after {
+      animation-duration: 0.2s;
+      animation-name: none;
+      background-color: #0E1137;
+      height: 0.25rem;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 1.8rem;
+      width: 100%;
+  }
+
+  .active::after {
+      display: none;
+  }
+}
+
+/*
+* large Mobile
+*/
+
+@media only screen and (max-width: 555px) {
+  .navbar {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .navbar__menu__toggle {
+      right: 1rem;
+  }
+}
