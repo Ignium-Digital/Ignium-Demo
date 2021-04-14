@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, RichText, Image, Link } from '@sitecore-jss/sitecore-jss-react';
 import './HomeHero.css';
+import ContainerTwoColumn from '../ContainerTwoColumn';
 
 /**
  * A simple Content Block component, with a heading and rich text block.
@@ -9,14 +10,16 @@ import './HomeHero.css';
  */
 const HomeHero = ({ fields }) => (
   <div className="home-hero">
-    <div className="home-hero-text">
-      <Text tag="h2" className="home-hero-heading" field={fields.heading} />
-      <RichText className="home-hero-subheading" field={fields.subheading} />
-      <Link className="home-hero-action" field={fields.link} />
-    </div>
-    <div className="home-hero-image">
-      <Image media={fields.image} />
-    </div>
+    <ContainerTwoColumn>
+      <div className="home-hero-text">
+        <Text tag="h2" className="home-hero-heading" field={fields.heading} />
+        <RichText className="home-hero-subheading" field={fields.subheading} />
+        <Link className="home-hero-action" field={fields.link} />
+      </div>
+      <div className="home-hero-image">
+        <Image media={fields.image} />
+      </div>
+    </ContainerTwoColumn>
   </div>
 );
 

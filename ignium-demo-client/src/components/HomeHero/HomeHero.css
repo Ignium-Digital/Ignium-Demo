@@ -1,16 +1,6 @@
-.home-hero {
-  display: grid;
-  grid-template-areas: "text image";
-}
-
 .home-hero-text {
   display: flex;
   flex-direction: column;
-  grid-area: text;
-}
-
-.home-hero-image {
-  grid-area: image;
 }
 
 .home-hero-text .home-hero-heading {
