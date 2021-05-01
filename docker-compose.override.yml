@@ -37,7 +37,7 @@ services:
       context: ./docker/build/mssql
       args:
         BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-mssql:${SITECORE_VERSION}
-        HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-20H2
+        HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-1809
         HEADLESS_SERVICES_IMAGE: ${HEADLESS_SERVICES_IMAGE}  
     volumes:
       - ${LOCAL_DATA_PATH}\mssql:c:\data
@@ -69,7 +69,7 @@ services:
         BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-cm:${SITECORE_VERSION}
         TOOLING_IMAGE: ${TOOLS_IMAGE}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-        HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-20H2
+        HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-1809
         HEADLESS_SERVICES_IMAGE: ${HEADLESS_SERVICES_IMAGE}
     depends_on:
       - solution
