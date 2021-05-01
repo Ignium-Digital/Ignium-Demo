@@ -18,7 +18,7 @@ if (Test-IsEnvInitialized -FilePath ".\.env.local" ) {
         Start-Docker -Url "$($hostDomain)/sitecore" -Build
         exit 0
     }
-    Start-Docker -Url "$(Get-EnvValueByKey "CM_HOST")/sitecore"
+    Start-Docker -Url "$(Get-EnvValueByKey "CM_HOST")/sitecore" -Build
     exit 0
 }
 

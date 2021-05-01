@@ -3,14 +3,19 @@
 ARG BASE_IMAGE
 ARG HEADLESS_SERVICES_IMAGE
 ARG TOOLING_IMAGE
+ARG HRZ_IMAGE
 ARG SOLUTION_IMAGE
 
 FROM ${SOLUTION_IMAGE} as solution
 FROM ${TOOLING_IMAGE} as tooling
 FROM ${HEADLESS_SERVICES_IMAGE} as headless
+FROM ${HRZ_IMAGE} as horizon
 FROM ${BASE_IMAGE}
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+# Enable WebSockets
+RUN powershell -Command Add-WindowsFeature Web-WebSockets
 
 # Copy development tools and entrypoint
 COPY --from=tooling \tools\ \tools\
@@ -25,6 +30,9 @@ RUN C:\module\tools\Initialize-Content.ps1 -TargetPath .\; `
 
 # Allow configurable JSS Import User
 #COPY .\config .\App_Config\Include\
+
+# Add Horizon Module
+COPY --from=horizon \module\cm\content .\
 
 # Copy solution website files
 COPY --from=solution /artifacts/platform/ ./
