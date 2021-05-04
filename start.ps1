@@ -1,5 +1,9 @@
 #Requires -RunAsAdministrator
 
+param(
+    [Switch]$Build = $false
+)
+
 Import-Module -Name (Join-Path $PSScriptRoot ".\docker\tools\SitecoreDockerCli.psm1") -Force
 
 Show-Logo
@@ -15,10 +19,21 @@ if (Test-IsEnvInitialized -FilePath ".\.env.local" ) {
             throw "Required variable 'HOST_DOMAIN' not set in .env file."
         }
         Initialize-HostNames $hostDomain
-        Start-Docker -Url "$($hostDomain)/sitecore" -Build
+
+        if ($Build.IsPresent) {
+            Start-Docker -Url "$($hostDomain)/sitecore" -Build
+        } else {
+            Start-Docker -Url "$($hostDomain)/sitecore"
+        }
         exit 0
     }
-    Start-Docker -Url "$(Get-EnvValueByKey "CM_HOST")/sitecore" -Build
+
+    if ($Build.IsPresent) {
+        Start-Docker -Url "$(Get-EnvValueByKey "CM_HOST")/sitecore" -Build
+    } else {
+        Start-Docker -Url "$(Get-EnvValueByKey "CM_HOST")/sitecore"
+    }
+    
     exit 0
 }
 
@@ -41,4 +56,8 @@ Set-EnvFileVariable "SITECORE_ID_CERTIFICATE_PASSWORD" -Value $idCertPassword -P
 $saPassword = Get-SitecoreRandomString 12 -DisallowSpecial
 Set-EnvFileVariable "SQL_SA_PASSWORD" -Value $saPassword -Path ".env.local"
 
-Start-Docker -Url "cm.$($hostDomain)/sitecore" -Build
+if ($Build.IsPresent) {
+    Start-Docker -Url "cm.$($hostDomain)/sitecore" -Build
+} else {
+    Start-Docker -Url "cm.$($hostDomain)/sitecore"
+}
